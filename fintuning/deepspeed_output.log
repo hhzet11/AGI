@@ -1,98 +1,0 @@
-[2025-09-09 06:12:14,234] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:12:15,996] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:12:17,493] [WARNING] [runner.py:220:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
-[2025-09-09 06:12:17,493] [INFO] [runner.py:610:main] cmd = /home/apitrain2/miniconda3/envs/dsenv/bin/python3.11 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgMywgNCwgNV19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None train.py
-[2025-09-09 06:12:19,054] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:12:20,819] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:12:22,268] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3, 4, 5]}
-[2025-09-09 06:12:22,268] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=6, node_rank=0
-[2025-09-09 06:12:22,268] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3, 4, 5]})
-[2025-09-09 06:12:22,268] [INFO] [launch.py:164:main] dist_world_size=6
-[2025-09-09 06:12:22,268] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3,4,5
-[2025-09-09 06:12:22,269] [INFO] [launch.py:256:main] process 3141303 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=0']
-[2025-09-09 06:12:22,269] [INFO] [launch.py:256:main] process 3141304 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=1']
-[2025-09-09 06:12:22,270] [INFO] [launch.py:256:main] process 3141305 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=2']
-[2025-09-09 06:12:22,270] [INFO] [launch.py:256:main] process 3141306 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=3']
-[2025-09-09 06:12:22,270] [INFO] [launch.py:256:main] process 3141307 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=4']
-[2025-09-09 06:12:22,270] [INFO] [launch.py:256:main] process 3141308 spawned with command: ['/home/apitrain2/miniconda3/envs/dsenv/bin/python3.11', '-u', 'train.py', '--local_rank=5']
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.72s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.83s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.60s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.63s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.30s/it]
-Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.39s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.79s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.78s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.74s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.68s/it]
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-[2025-09-09 06:13:45,413] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:13:51,073] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:13:51,142] [INFO] [comm.py:821:init_distributed] cdb=None
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-[2025-09-09 06:14:03,109] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-train에서 중복 제거: 10203개 삭제 (최종 195224개)
-dev에서 중복 제거: 205개 삭제 (최종 5031개)
-test에서 중복 제거: 1187개 삭제 (최종 22796개)
-[2025-09-09 06:14:05,608] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:14:05,626] [INFO] [comm.py:821:init_distributed] cdb=None
-[2025-09-09 06:14:06,943] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:14:06,969] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:14:07,004] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:14:07,099] [INFO] [real_accelerator.py:260:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-09-09 06:14:08,688] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:14:08,706] [INFO] [comm.py:821:init_distributed] cdb=None
-[2025-09-09 06:14:08,726] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:14:08,741] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:14:08,746] [INFO] [comm.py:821:init_distributed] cdb=None
-[2025-09-09 06:14:08,759] [INFO] [comm.py:821:init_distributed] cdb=None
-[2025-09-09 06:14:08,759] [INFO] [comm.py:852:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
-[2025-09-09 06:14:08,947] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
-[2025-09-09 06:14:08,965] [INFO] [comm.py:821:init_distributed] cdb=None
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-/home/apitrain2/hy_agi/fintuning/train.py:165: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 128009, 'pad_token_id': 128009}.
-Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 8. Using DeepSpeed's value.
-  0%|          | 0/4068 [00:00<?, ?it/s]/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-/home/apitrain2/miniconda3/envs/dsenv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
-  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
-  0%|          | 1/4068 [00:04<5:24:27,  4.79s/it]
