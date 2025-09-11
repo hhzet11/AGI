@@ -1,0 +1,29 @@
+{
+    "train_batch_size": 12,                  
+    "train_micro_batch_size_per_gpu": 2,    
+    "gradient_accumulation_steps": 1,        
+    "optimizer": {
+      "type": "AdamW",
+      "params": {
+        "lr": 5e-5,
+        "weight_decay": 0.01
+      }
+    },
+    "zero_optimization": {
+      "stage": 2,                      
+      "offload_optimizer": {
+        "device": "none"         
+      },
+      "offload_param": {
+        "device": "none"
+      }
+    },
+    "fp16": {
+      "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "steps_per_print": 1,
+    "wall_clock_breakdown": false,
+    "disable_fused_ops": true
+  }
+  
